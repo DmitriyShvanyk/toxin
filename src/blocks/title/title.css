@@ -1,0 +1,6 @@
+.title {
+  font-weight: 700;  
+  line-height: 1.25;
+  font-family: var(--font-title);
+  color: var(--dark);
+}

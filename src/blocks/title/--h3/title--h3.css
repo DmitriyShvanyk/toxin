@@ -1,0 +1,5 @@
+.title--h3 {
+  font-family: var(--font-default);
+  font-size: 12px;
+  text-transform: uppercase;
+}
