@@ -1,0 +1,14 @@
+@import url(../logo/__image/logo__image.css);
+
+.logo {
+  display: inline-block;
+  vertical-align: top;
+  will-change: opacity;
+  transition: opacity .3s ease;
+}
+
+.logo:hover,
+.logo:focus,
+.logo:active{
+  opacity: .7;
+}

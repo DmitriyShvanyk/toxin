@@ -1,0 +1,23 @@
+.social {
+  display: flex;
+  align-items: center;
+}
+
+.social__item {
+  display: flex;
+  text-decoration: none;
+  margin-right: 20px;
+  will-change: opacity;
+  transition: opacity .3s ease;
+}
+
+.social__item:last-of-type {
+  margin-right: 0;
+}
+
+.social__item:hover,
+.social__item:focus,
+.social__item:active {
+  text-decoration: none;
+  opacity: .7;
+}

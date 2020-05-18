@@ -1,0 +1,10 @@
+.label {
+  font-family: var(--font-default);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.25;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 5px;
+  display: flex;
+}

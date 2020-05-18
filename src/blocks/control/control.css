@@ -1,0 +1,33 @@
+.control {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  height: 44px;
+  font-size: var(--font-size-default);
+  font-family: var(--font-default);
+  background-color: var(--white);
+  border: 1px solid var(--dark-25);
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color .3s ease, color .3s ease;
+}
+
+.control::placeholder {
+  color: var(--dark-25);
+  transition: color .3s ease;
+}
+
+.control:hover,
+.control:focus,
+.control--active {
+  color: var(--dark-75);
+  border-color: var(--dark-50);
+}
+
+.control:hover::placeholder,
+.control:focus::placeholder,
+.control--active::placeholder {
+  color: var(--dark-75);
+}
+

@@ -1,0 +1,52 @@
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  color: var(--white);
+  border: none;
+  padding: 14.5px 19.5px;
+  background: linear-gradient(180deg, rgba(188, 156, 255, 1) 0%, rgba(139, 164, 249, 1) 100%);
+  border-radius: 22px;
+  cursor: pointer;
+  will-change: opacity;
+  transition: opacity .3s ease;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.btn__text {
+  display: block;
+  padding: 13.5px 18.5px;
+  background-color: var(--white);
+  color: var(--purple);
+  border-radius: 20px;
+  box-sizing: border-box;
+}
+
+.btn--sm {
+  padding: 9.5px 20px;
+}
+
+.btn--outline {
+  padding: 2px;
+}
+
+.btn__text--sm {
+  padding: 7.5px 18px;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+  opacity: .5;
+}
+
+.btn--outline:hover,
+.btn--outline:focus,
+.btn--outline:active {
+  background: linear-gradient(180deg, rgba(188, 156, 255, .5) 0%, rgba(139, 164, 249, .5) 100%);
+  opacity: 1;
+}

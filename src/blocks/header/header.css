@@ -1,0 +1,33 @@
+.header {
+  min-height: 900px;
+  background-color: var(--dark-75);
+  background-image: url(../../images/header/header.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header__container {
+  padding-top: 70px;
+  padding-bottom: 20px;
+}
+
+.header__inner {
+  position: relative;
+  min-height: calc(900px - 90px);
+}
+
+.header__caption {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  text-align: right;
+  max-width: 297px;
+  width: 100%;
+  z-index: 1;
+}
+
+.header__form{
+  max-width: 380px;
+  width: 100%;
+}

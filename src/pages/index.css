@@ -5,3 +5,20 @@
 @import url(../blocks/container/container.css);
 @import url(../blocks/basic/basic.css);
 @import url(../blocks/root/root.css);
+
+
+@import url(../blocks/logo/logo.css);
+@import url(../blocks/btn/btn.css);
+@import url(../blocks/title/title.css);
+@import url(../blocks/title/--h1/title--h1.css);
+@import url(../blocks/title/--h3/title--h3.css);
+@import url(../blocks/social/social.css);
+
+@import url(../blocks/label/label.css);
+@import url(../blocks/control/control.css);
+
+@import url(../blocks/form/form.css);
+
+@import url(../blocks/navbar/navbar.css);
+@import url(../blocks/header/header.css);
+@import url(../blocks/footer/footer.css);
