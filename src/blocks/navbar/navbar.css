@@ -1,24 +1,26 @@
 .navbar {
-  position: fixed; top: 0; left: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   z-index: 999;
   background: var(--white);
   box-shadow: 0 10px 20px var(--dark-5);
 }
 
-.navbar__container{
+.navbar__container {
   padding-top: 15px;
   padding-bottom: 15px;
   display: flex;
-  align-items: center;  
+  align-items: center;
 }
 
-.navbar__collapse{
+.navbar__collapse {
   margin-left: auto;
   margin-right: 20px;
 }
 
-.navbar__menu{
+.navbar__menu {
   display: flex;
   align-items: center;
   padding-left: 0;
@@ -26,11 +28,11 @@
   list-style: none;
 }
 
-.navbar__item{
+.navbar__item {
   position: relative;
 }
 
-.navbar__link{
+.navbar__link {
   display: block;
   color: var(--dark-50);
   text-decoration: none;
@@ -41,34 +43,35 @@
 
 .navbar__link:hover,
 .navbar__link:focus,
-.navbar__link:active{  
+.navbar__link:active {
   color: var(--dark-75);
 }
 
-.navbar__link--active{
+.navbar__link--active {
   font-weight: 700;
   color: var(--dark-75);
 }
 
-
-.navbar__link-icon{
+.navbar__link-icon {
   margin-left: 5px;
-  position: relative; top: -2px;
   display: inline-block;
-  width: 6px;
-  height: 6px;
-  border: 2px solid var(--dark-50);
-  border-top: none;
-  border-left: none;
-  transform: rotate(45deg);
+  font-size: 8px;
+  will-change: transform;
+  transition: transform .3s ease;
 }
 
-.navbar__btn-login{
+.navbar__btn-login {
   margin-right: 20px;
 }
 
-.navbar__submenu{
-  position: absolute; top: 100%; left: 0;
+.navbar__btn-reg--mobile {
+  display: none;
+}
+
+.navbar__submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
   padding: 10px 0;
   margin: 0;
   list-style: none;
@@ -85,11 +88,157 @@
   transform: scale(0);
 }
 
-.navbar__item:hover .navbar__submenu{
+.navbar__item:hover .navbar__submenu {
   z-index: 99;
   transform: scale(1);
 }
 
+.navbar__item:hover .navbar__link-icon {
+  transform: rotate(180deg) translateY(2px);
+}
+
 .navbar__submenu .navbar__link {
   padding: 5px 20px;
+}
+
+.navbar__hamburger {
+  display: none;
+  background-color: transparent;
+  border: none;
+  width: 30px;
+  height: 26px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  outline: none;
+  margin-left: 20px;
+}
+
+.navbar__hamburger-line {
+  display: block;
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: var(--dark-50);
+  border-radius: 2px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  will-change: transform;
+  transition: .25s ease-in-out;
+}
+
+.navbar__hamburger-line:hover {
+  background-color: var(--dark-75);
+}
+
+.navbar__hamburger-line:nth-child(1) {
+  top: 0px;
+}
+
+.navbar__hamburger-line:nth-child(2) {
+  top: 10px;
+}
+
+.navbar__hamburger-line:nth-child(3) {
+  top: 20px;
+}
+
+.navbar__hamburger--open .navbar__hamburger-line {
+  background-color: tomato;
+}
+
+.navbar__hamburger--open .navbar__hamburger-line:nth-child(1) {
+  top: 10px;
+  transform: rotate(135deg);
+}
+
+.navbar__hamburger--open .navbar__hamburger-line:nth-child(2) {
+  opacity: 0;
+  left: -30px;
+}
+
+.navbar__hamburger--open .navbar__hamburger-line:nth-child(3) {
+  top: 10px;
+  transform: rotate(-135deg);
+}
+
+@media (max-width: 991px) {
+  .navbar__collapse {
+    margin-left: 0;
+    margin-right: 0;
+    width: 320px;
+    min-height: calc(100vh - 70px);
+    max-height: calc(100vh - 70px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 20px 40px;
+    border-top: 1px solid var(--dark-10);
+    background-color: var(--white);
+    z-index: 99;
+    position: fixed;
+    top: 70px;
+    right: 0;
+    transform: translateX(100%);
+    will-change: transform;
+    transition: transform .3s ease;
+    box-sizing: border-box;
+  }
+
+  .navbar__collapse--open {
+    transform: translateX(0);
+  }
+
+  .navbar__hamburger {
+    display: block;
+  }
+
+  .navbar__menu {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar__item {
+    display: block;
+    width: 100%;
+  }
+
+  .navbar__btn-login {
+    margin-left: auto;
+  }
+
+  .navbar__submenu {
+    position: relative;
+    top: 0;
+    padding: 0 0 10px;
+    min-width: 200px;
+    z-index: 1;
+    box-shadow: none;
+    border-radius: 0;
+    border: none;
+    transform-origin: 0 0;
+    transform: scale(1);
+  }
+
+  .navbar__submenu .navbar__link {
+    padding-left: 40px;
+  }
+
+  .navbar__link-icon {
+    display: none;
+  }
+
+  .navbar__btn-login {
+    margin-right: 0;
+  }
+
+  .navbar__btn-reg {
+    display: none;
+  }
+
+  .navbar__btn-reg--mobile {
+    display: block;
+    margin: 15px 0;
+  }
 }

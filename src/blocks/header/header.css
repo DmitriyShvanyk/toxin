@@ -27,7 +27,30 @@
   z-index: 1;
 }
 
-.header__form{
+.header__form {
   max-width: 380px;
   width: 100%;
+}
+
+@media (max-width: 991px) {
+  .header {
+    min-height: calc(100vh - 70px);
+
+  }
+
+  .header__container {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .header__inner {
+    min-height: calc(100vh - 170px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header__caption{
+    display: none;
+  }
 }

@@ -33,28 +33,12 @@
   position: absolute;
   top: 50%;
   right: 15px;
-  width: 14px;
-  height: 2px;
-  margin-top: -1px;
-  background-color: var(--white);
+  font-size: 18px;
   will-change: transform;
+  transform: translateY(-50%);
   transition: transform .3s ease-in-out;
 }
 
-.form__submit-icon::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: 0;
-  width: 8px;
-  height: 8px;
-  border: 2px solid var(--white);
-  border-left: none;
-  border-bottom: none;
-  transform: rotate(45deg);
-  margin-top: -5px;
-}
-
 .form__submit:hover .form__submit-icon {
-  transform: translateX(-5px);
+  transform: translateY(-50%) translateX(-5px);
 }

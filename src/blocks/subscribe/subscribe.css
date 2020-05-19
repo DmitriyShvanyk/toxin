@@ -1,0 +1,42 @@
+.subscribe {
+  display: block;
+}
+
+.subscribe__head {
+  margin-bottom: 25px;
+}
+
+.subscribe__form {
+  position: relative;
+}
+
+.subscribe__submit {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 44px;
+  height: 44px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  will-change: opacity;
+  transition: opacity .3s ease;
+}
+
+.subscribe__submit-icon{
+  font-size: 18px;
+  background: linear-gradient(180deg, #BC9CFF 0%, #8BA4F9 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #BC9CFF;
+}
+
+.subscribe__submit:hover,
+.subscribe__submit:focus,
+.subscribe__submit:active {
+  opacity: .8;
+}
