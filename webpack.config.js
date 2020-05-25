@@ -9,6 +9,8 @@ const isDev = process.env.NODE_ENV === 'development'
 module.exports = {
   entry: {
     index: './src/js/index.js',
+    login: './src/js/login.js',
+    searchRoom: './src/js/searchRoom.js',
     ui: './src/js/ui.js'
   },
   output: {
@@ -36,7 +38,7 @@ module.exports = {
           'css-loader',
           'postcss-loader'
         ]
-      },      
+      },
       {
         test: /\.(png|jpg|gif|ico|svg|webp)$/,
         use: [
@@ -75,7 +77,7 @@ module.exports = {
             }
           }
         ]
-      },     
+      },
       {
         test: /\.(ttf|eot|woff|woff2)$/,
         use: {
@@ -92,6 +94,7 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: './css/[name].[contenthash].css'
     }),
+
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
@@ -100,6 +103,15 @@ module.exports = {
       favicon: './src/favicon.ico',
       chunks: ['index']
     }),
+
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './src/login.html',
+      filename: 'login.html',
+      chunks: ['login']
+    }),
+
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
@@ -107,13 +119,13 @@ module.exports = {
       filename: 'ui.html',
       chunks: ['ui']
     }),
-    /*new HtmlWebpackPlugin({
+    new HtmlWebpackPlugin({
       inject: false,
       hash: true,
-      template: './src/analytics.html',
-      filename: 'analytics.html',
-      chunks: ['analytics', 'main']
-    }),*/
+      template: './src/searchRoom.html',
+      filename: 'searchRoom.html',
+      chunks: ['searchRoom']
+    }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({
       'NODE_ENV': JSON.stringify(process.env.NODE_ENV)
@@ -125,6 +137,6 @@ module.exports = {
         preset: ['default']
       },
       canPrint: true
-    }),    
+    }),
   ]
 };

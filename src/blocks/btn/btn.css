@@ -14,7 +14,7 @@
   will-change: opacity;
   transition: opacity .3s ease;
   outline: none;
-  box-sizing: border-box;
+  text-decoration: none;
 }
 
 .btn__text {
@@ -23,7 +23,6 @@
   background-color: var(--white);
   color: var(--purple);
   border-radius: 20px;
-  box-sizing: border-box;
 }
 
 .btn--sm {
@@ -41,12 +40,14 @@
 .btn:hover,
 .btn:focus,
 .btn:active {
-  opacity: .5;
+  color: var(--white);
+  text-decoration: none;
+  opacity: .75;
 }
 
 .btn--outline:hover,
 .btn--outline:focus,
-.btn--outline:active {
+.btn--outline:active {  
   background: linear-gradient(180deg, rgba(188, 156, 255, .5) 0%, rgba(139, 164, 249, .5) 100%);
   opacity: 1;
 }

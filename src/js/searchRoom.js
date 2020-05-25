@@ -7,7 +7,7 @@ import Navbar from '../blocks/navbar/navbar'
 
 import Dropdown from '../blocks/dropdown/dropdown'
 
-import '../pages/index.css'
+import '../pages/searchRoom.css'
 
 
 

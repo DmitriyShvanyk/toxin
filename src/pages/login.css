@@ -10,14 +10,11 @@
 @import url(../blocks/btn/btn.css);
 @import url(../blocks/title/title.css);
 @import url(../blocks/social/social.css);
-@import url(../blocks/pagination/pagination.css);
 
 @import url(../blocks/label/label.css);
 @import url(../blocks/control/control.css);
-@import url(../blocks/flatpickr-calendar/flatpickr-calendar.css);
-@import url(../blocks/dropdown/dropdown.css);
-
 @import url(../blocks/form/form.css);
+@import url(../blocks/form/form-login.css);
 @import url(../blocks/subscribe/subscribe.css);
 
 @import url(../blocks/navbar/navbar.css);

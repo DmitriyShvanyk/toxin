@@ -32,10 +32,29 @@
   width: 100%;
 }
 
+
+
+/* header--login */
+
+.header--login{
+  min-height: calc(100vh - 70px);
+  background-image: url(../../images/header/header--login.jpg);
+}
+
+.header--login .header__container {
+  padding-top: 20px;
+}
+
+.header--login .header__inner{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 90px);
+}
+
 @media (max-width: 991px) {
   .header {
-    min-height: calc(100vh - 70px);
-
+    min-height: calc(100vh - 70px);    
   }
 
   .header__container {
@@ -54,3 +73,13 @@
     display: none;
   }
 }
+
+
+
+
+
+
+
+
+
+

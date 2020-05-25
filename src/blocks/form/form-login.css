@@ -1,0 +1,18 @@
+.form--login .form__item{
+  margin-bottom: 10px;
+}
+
+.form__no-account{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.form__no-account-text{
+  color: var(--dark);
+  line-height: 18px;
+}
+
+.form__no-account-btn{
+  margin-left: auto;
+}

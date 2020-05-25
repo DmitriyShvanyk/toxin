@@ -7,7 +7,6 @@
   font-family: var(--font-default);
   background-color: var(--white);
   border: 1px solid var(--dark-25);
-  box-sizing: border-box;
   border-radius: 4px;
   outline: none;
   transition: border-color .3s ease, color .3s ease;
@@ -30,4 +29,3 @@
 .control--active::placeholder {
   color: var(--dark-75);
 }
-
