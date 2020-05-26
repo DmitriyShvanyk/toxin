@@ -2,21 +2,27 @@
 <html lang="ru">
 
 <head>
-  <title>TOXIN</title>
+  <title>Страница регистрации || TOXIN</title>
   <meta charset="UTF-8">
-  <meta name="keywords" content='TOXIN'>
-  <meta name="description" content='TOXIN'>
+  <meta name="keywords" content='Страница регистрации || TOXIN'>
+  <meta name="description" content='Страница регистрации || TOXIN'>
   <meta name="author" content='Dmitriy Shvanyk'>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <link rel="shortcut icon" href="./favicon.ico">
-  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.searchRoom.css %>">
+  <link rel="stylesheet" href="<%= htmlWebpackPlugin.files.chunks.registration.css %>">
 </head>
 
 <body>
 
   <div class="root">
+
+    <!--preloader.begin-->
+    <div class="preloader">
+      <div class="preloader__icon"></div>
+    </div>
+    <!--preloader.end-->
 
     <!--navbar.begin-->
     <navbar class="navbar">
@@ -69,21 +75,68 @@
         </button>
       </div>
     </navbar>
-    <!--navbar.end-->    
+    <!--navbar.end-->
+
+    <!--header.begin-->
+    <header class="header header--login">
+      <div class="container header__container">
+        <div class="header__inner">
+          <form action="#" class="form header__form form--registration" method="POST">
+            <h1 class="title title--h1">Регистрация аккаунта</h1>
+            <div class="form__item form__item--mb10">
+              <input type="text" class="control" name="registrationFirstName" placeholder="Имя" required>
+            </div>
+            <div class="form__item form__item--mb10">
+              <input type="text" class="control" name="registrationLastName" placeholder="Фамилия" required>
+            </div>
+            <div class="form__item">
+              <label class="radio">
+                <input type="radio" class="radio__control sr-only" name="registrationGender" value="Мужчина" checked>
+                <span class="radio__icon"></span>
+                <span class="radio__text">Мужчина</span>
+              </label>
+              <label class="radio">
+                <input type="radio" class="radio__control sr-only" name="registrationGender" value="Женщина">
+                <span class="radio__icon"></span>
+                <span class="radio__text">Женщина</span>
+              </label>
+            </div>
+            <div class="form__item">
+              <label for="registrationDOB" class="label">дата рождения</label>
+              <input type="text" class="control" id="registrationDOB" name="registrationDOB" placeholder="ДД.ММ.ГГГГ" required>
+            </div>
+            <div class="form__item form__item--mb10">
+              <label for="registrationEmail" class="label">данные для входа в сервис</label>
+              <input type="email" class="control" name="registrationEmail" placeholder="Email" required>
+            </div>
+            <div class="form__item form__item--mb10">
+              <input type="password" class="control" name="registrationPassword" placeholder="Пароль" required>
+            </div>
+            <div class="form__item form__item--mb10">
+              <label class="toggle">
+                <input type="checkbox" class="toggle__control sr-only" name="registrationSpecialOffer">
+                <span class="toggle__icon"></span>
+                <span class="toggle__text">Получать спецпредложения</span>
+              </label>
+            </div>
+            <button class="btn form__submit">
+              перейти к оплате
+              <span class="icon-arrow-right form__submit-icon"></span>
+            </button>
+            <div class="form__account-info">
+              <div class="form__account-info-text">Уже есть аккаунт на Toxin</div>
+              <a href="registration.html" class="btn btn--outline form__account-info-btn">
+                <span class="btn__text">войти</span>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </header>
+    <!--header.end-->
 
     <!--main.begin-->
-    <main class="main">
-      <div class="search-room">
-        <div class="container search-room__container">
-          <aside class="search-room__sidebar">
-
-          </aside>
-          <section class="search-room__content">
-            <h1 class="title search-room__title">Номера, которые мы для вас подобрали</h1>
-          </section>
-        </div>        
-      </div>      
-    </main>
+    <main class="main"></main>
     <!--main.end-->
 
     <!--footer.begin-->
@@ -162,12 +215,10 @@
     </footer>
     <!--footer.end-->
 
-
-
   </div>
 
   <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
-  <script src="<%= htmlWebpackPlugin.files.chunks.searchRoom.entry %>"></script>
+  <script src="<%= htmlWebpackPlugin.files.chunks.registration.entry %>"></script>
 
 </body>
 

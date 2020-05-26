@@ -18,6 +18,12 @@
 
   <div class="root">
 
+    <!--preloader.begin-->
+    <div class="preloader">
+      <div class="preloader__icon"></div>
+    </div>
+    <!--preloader.end-->
+
     <!--navbar.begin-->
     <navbar class="navbar">
       <div class="container navbar__container">
@@ -215,6 +221,7 @@
 
   </div>
 
+  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
   <script src="<%= htmlWebpackPlugin.files.chunks.index.entry %>"></script>
 
 </body>

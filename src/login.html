@@ -18,6 +18,12 @@
 
   <div class="root">
 
+    <!--preloader.begin-->
+    <div class="preloader">
+      <div class="preloader__icon"></div>
+    </div>
+    <!--preloader.end-->
+
     <!--navbar.begin-->
     <navbar class="navbar">
       <div class="container navbar__container">
@@ -77,20 +83,19 @@
         <div class="header__inner">
           <form action="#" class="form header__form form--login" method="POST">
             <h1 class="title title--h1">Войти</h1>
-            <div class="form__item">
+            <div class="form__item form__item--mb10">
               <input type="email" class="control" name="loginEmail" placeholder="Email" required>
             </div>
-            <div class="form__item">
+            <div class="form__item form__item--mb10">
               <input type="password" class="control" name="loginPassword" placeholder="Пароль" required>
-            </div>            
+            </div>
             <button class="btn form__submit">
               войти
               <span class="icon-arrow-right form__submit-icon"></span>
-            </button>    
-            
-            <div class="form__no-account">
-              <div class="form__no-account-text">Нет аккаунта на Toxin?</div>
-              <a href="registration.html" class="btn btn--outline form__no-account-btn">
+            </button>
+            <div class="form__account-info">
+              <div class="form__account-info-text">Нет аккаунта на Toxin?</div>
+              <a href="registration.html" class="btn btn--outline form__account-info-btn">
                 <span class="btn__text">создать</span>
               </a>
             </div>
@@ -180,10 +185,9 @@
     </footer>
     <!--footer.end-->
 
-
-
   </div>
 
+  <script src="<%= htmlWebpackPlugin.files.chunks.main.entry %>"></script>
   <script src="<%= htmlWebpackPlugin.files.chunks.login.entry %>"></script>
 
 </body>

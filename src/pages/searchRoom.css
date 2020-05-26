@@ -5,6 +5,7 @@
 @import url(../blocks/container/container.css);
 @import url(../blocks/basic/basic.css);
 @import url(../blocks/root/root.css);
+@import url(../blocks/preloader/preloader.css);
 
 @import url(../blocks/logo/logo.css);
 @import url(../blocks/btn/btn.css);

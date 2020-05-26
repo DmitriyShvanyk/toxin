@@ -14,7 +14,7 @@
 
 @import url(../blocks/basic/basic.css);
 @import url(../blocks/root/root.css);
-
+@import url(../blocks/preloader/preloader.css);
 
 
 .ui__colors-item {

@@ -9,6 +9,10 @@
   margin-bottom: 20px;
 }
 
+.form__item--mb10 {
+  margin-bottom: 10px;
+}
+
 .form__columns {
   display: flex;
   margin-left: -10px;
@@ -40,6 +44,22 @@
 
 .form__submit:hover .form__submit-icon {
   transform: translateY(-50%) translateX(-5px);
+}
+
+.form__account-info {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.form__account-info-text {
+  color: var(--dark);
+  line-height: 18px;
+}
+
+.form__account-info-btn {
+  margin-left: auto;
+  min-width: 100px;
 }
 
 @media (max-width:576px) {

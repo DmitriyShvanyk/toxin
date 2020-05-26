@@ -10,8 +10,10 @@ module.exports = {
   entry: {
     index: './src/js/index.js',
     login: './src/js/login.js',
+    registration: './src/js/registration.js',
     searchRoom: './src/js/searchRoom.js',
-    ui: './src/js/ui.js'
+    ui: './src/js/ui.js',
+    main: './src/js/main.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -101,16 +103,23 @@ module.exports = {
       template: './src/index.html',
       filename: 'index.html',
       favicon: './src/favicon.ico',
-      chunks: ['index']
+      chunks: ['index', 'main']
     }),
-
     new HtmlWebpackPlugin({
       inject: false,
       hash: true,
       template: './src/login.html',
       filename: 'login.html',
-      chunks: ['login']
+      chunks: ['login', 'main']
     }),
+    new HtmlWebpackPlugin({
+      inject: false,
+      hash: true,
+      template: './src/registration.html',
+      filename: 'registration.html',
+      chunks: ['registration', 'main']
+    }),
+
 
     new HtmlWebpackPlugin({
       inject: false,
@@ -124,7 +133,7 @@ module.exports = {
       hash: true,
       template: './src/searchRoom.html',
       filename: 'searchRoom.html',
-      chunks: ['searchRoom']
+      chunks: ['searchRoom', 'main']
     }),
     new WebpackMd5Hash(),
     new webpack.DefinePlugin({

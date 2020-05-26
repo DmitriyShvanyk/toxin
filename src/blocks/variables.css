@@ -10,5 +10,9 @@
   --dark-5: rgba(31, 32, 65, .05);
   --purple: rgba(188, 156, 255, 1);
   --green: rgba(111, 207, 151, 1);
+  --blue: rgba(139, 164, 249, 1);
+  --lightblue: rgba(102, 210, 234, 1);
   --white: rgba(255, 255, 255, 1);
+  --white-20: rgba(255, 255, 255, .2);
+  --lightgray: rgba(237, 230, 255, 1);
 }
