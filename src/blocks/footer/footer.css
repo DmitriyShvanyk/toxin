@@ -13,9 +13,9 @@
 }
 
 .footer__container-bottom {
+  display: flex;
   padding-top: 23.5px;
   padding-bottom: 23.5px;
-  display: flex;
 }
 
 .footer__social {

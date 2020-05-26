@@ -41,12 +41,12 @@
 .pagination__link--next {
   font-size: 18px;
   color: var(--white);
-  background: linear-gradient(180deg, #6FCF97 0%, #66D2EA 100%);
+  background: linear-gradient(180deg, var(--green) 0%, var(--lightblue) 100%);
   will-change: opacity;
   transition: opacity .3s ease;
 }
 
-.pagination__link--prev{
+.pagination__link--prev {
   display: none;
 }
 
@@ -73,7 +73,6 @@
   color: var(--white);
   background: linear-gradient(180deg, var(--purple) 0%, var(--blue) 100%);
 }
-
 
 .pagination__caption {
   margin-top: 8px;
