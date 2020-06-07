@@ -1,8 +1,8 @@
-.search-room{
+.search-room {
   width: 100%;
 }
 
-.search-room__container{
+.search-room__container {
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -10,16 +10,16 @@
   padding-bottom: 30px;
 }
 
-.search-room__sidebar{
+.search-room__sidebar {
   width: 266px;
   margin-right: 60px;
 }
 
-.search-room__content{
+.search-room__content {
   width: calc(100% - 326px);
 }
 
-.search-room__title{
+.search-room__title {
   font-weight: 700;
   font-size: 23.2px;
   line-height: 30px;

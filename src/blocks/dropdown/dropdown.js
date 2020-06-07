@@ -1,8 +1,5 @@
 export default class Dropdown {
   constructor({ selector, label, worlds = [] }) {
-    if(this.container === null){
-      return;
-    }
     this.container = document.querySelector(selector);
     this.label = label;
     this.worlds = worlds;
@@ -15,6 +12,10 @@ export default class Dropdown {
     this.onCount = this.onCount.bind(this);
     this.clear = this.clear.bind(this);
     this.apply = this.apply.bind(this);
+
+    if(!this.container){
+      return
+    }
 
     const dropdownLabel = this.container.querySelector('.dropdown__label');
     const dropdownClear = this.container.querySelector('.dropdown__clear');
@@ -74,6 +75,9 @@ export default class Dropdown {
 
   // render
   render() {
+    if (this.container === null) {
+      return;
+    }
     this.container.insertAdjacentHTML('beforeend', this.create());
   }
 

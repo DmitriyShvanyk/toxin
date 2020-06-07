@@ -5,6 +5,9 @@ import '../../node_modules/flatpickr/dist/flatpickr.min.css'
 
 import Dropdown from '../blocks/dropdown/dropdown'
 
+import Swiper from 'swiper';
+import '../../node_modules/swiper/css/swiper.css'
+
 import '../pages/searchRoom.css'
 
 
@@ -58,6 +61,19 @@ window.addEventListener('DOMContentLoaded', () => {
     selector: '.dropdown',
     label: 'Сколько гостей',
     worlds: ['гость', 'гостя', 'гостей']
+  });
+
+  const sliderCard = new Swiper ('.card__slider', {
+    direction: 'horizontal',
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },    
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
   });
 
 });

@@ -1,0 +1,142 @@
+.cards__columns {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -6px;
+  margin-right: -6px;
+}
+
+.cards__column {
+  width: 33.333%;
+  max-width: 33.333%;
+  padding-left: 6px;
+  padding-right: 6px;
+  display: flex;
+}
+
+
+
+
+
+.card {
+  max-width: 270px;
+  background-color: var(--white);
+  box-shadow: 0 10px 20px var(--dark-5);
+  border-radius: 4px;
+  margin-bottom: 22px;
+}
+
+.card__head {
+  position: relative;
+  padding-top: 56.07%;
+  overflow: hidden;
+  height: 0;
+  background-color: var(--dark-50);
+  border-radius: 4px 4px 0 0;
+}
+
+.card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card__body {
+  padding: 15px 20px 5px;
+}
+
+.card__row {
+  display: flex;
+  align-items: center;
+  padding: 8px 0 12px;
+}
+
+.card__row+.card__row {
+  padding-top: 6px;
+  border-top: 1px solid var(--dark-10);
+}
+
+.card__num {
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1;
+  color: var(--dark);
+  margin-right: 5px;
+}
+
+.card__num-id {
+  font-size: 18px;
+}
+
+.card__type {
+  color: var(--purple);
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  margin-right: 5px;
+  margin-top: 3px;
+}
+
+.card__price {
+  color: var(--dark-50);
+  line-height: 18px;
+  font-size: 11px;
+  margin-left: auto;
+}
+
+.card__price-num {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.card__reviews {
+  color: var(--dark-50);
+  margin-left: auto;
+  margin-top: 3px;
+}
+
+.card__reviews-num {
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.card__slider .swiper-pagination {
+  display: flex;
+  justify-content: flex-end;
+  right: 13px;
+  left: auto;
+  bottom: 15px;
+}
+
+.card__slider .swiper-pagination-bullet {
+  background: transparent;
+  opacity: 1;
+  border: 1px solid var(--white);
+  margin:  0 2px;
+}
+
+.card__slider .swiper-pagination-bullet-active {
+  opacity: 1;
+  background: var(--white);
+}
+
+.card__slider .swiper-button-prev,
+.card__slider .swiper-button-next {
+  opacity: 0;
+  will-change: opacity;
+  transition: opacity .3s ease;
+}
+
+.card__slider .swiper-button-prev:after,
+.card__slider .swiper-button-next:after {
+  font-size: 14px;
+  color: var(--white);
+}
+
+.card:hover .card__slider .swiper-button-prev,
+.card:hover .card__slider .swiper-button-next {
+  opacity: 1;
+}
