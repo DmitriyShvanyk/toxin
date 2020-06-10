@@ -80,3 +80,7 @@
 .icon-star-border:before {
   content: "\e907";
 }
+
+.icon-check:before {
+  content: "\e908";
+}

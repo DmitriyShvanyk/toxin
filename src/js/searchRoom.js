@@ -5,6 +5,8 @@ import '../../node_modules/flatpickr/dist/flatpickr.min.css'
 
 import Dropdown from '../blocks/dropdown/dropdown'
 
+import Collapse from '../blocks/collapse/collapse'
+
 import Swiper from 'swiper';
 import '../../node_modules/swiper/css/swiper.css'
 
@@ -14,17 +16,20 @@ import '../pages/searchRoom.css'
 
 
 window.addEventListener('DOMContentLoaded', () => {
-  flatpickr('#dateFrom', {
+
+  flatpickr('#filterDates', {
+    mode: "range",
     enableTime: true,
+    minDate: "today",
     dateFormat: "d.m.Y",
     locale: "ru",
     disableMobile: "true",
     allowInput: true,
     nextArrow: '<span class="icon-arrow-right"></span>',
     prevArrow: '<span class="icon-arrow-left"></span>',
-    "plugins": [new rangePlugin({
+    /*"plugins": [new rangePlugin({
       input: "#dateTo"
-    })],
+    })],*/
     onReady: function (selectedDates, dateStr, instance) {
 
       const flatpickrInnerContainer = document.querySelector('.flatpickr-calendar');
@@ -50,30 +55,37 @@ window.addEventListener('DOMContentLoaded', () => {
       buttonClear.addEventListener('click', () => {
         instance.clear()
       });
-    },
-    onChange: function (selectedDates, dateStr, instance) {
-
-    },
-
+    }
   });
 
   const dropdownGuests = new Dropdown({
-    selector: '.dropdown',
+    selector: '.dropdown-guests',
     label: 'Сколько гостей',
+    items: ['взрослые', 'дети', 'младенцы'],
     worlds: ['гость', 'гостя', 'гостей']
   });
 
-  const sliderCard = new Swiper ('.card__slider', {
+  const dropdownRoomAmenities = new Dropdown({
+    selector: '.dropdown--room-amenities',
+    label: 'Кол-во удобств',
+    items: ['спальни', 'кровати', 'ванные комнаты'],
+    worlds: ['гость', 'гостя', 'гостей']
+  });
+  
+
+  const sliderCard = new Swiper('.card__slider', {
     direction: 'horizontal',
     loop: true,
     pagination: {
       el: '.swiper-pagination',
       clickable: true
-    },    
+    },
     navigation: {
       nextEl: '.swiper-button-next',
       prevEl: '.swiper-button-prev',
     }
   });
+  
+  const collapses = Array.from(document.querySelectorAll('.collapse')).map(item => new Collapse(item));
 
 });

@@ -15,9 +15,11 @@
 
 @import url(../blocks/label/label.css);
 @import url(../blocks/control/control.css);
+@import url(../blocks/checkbox/checkbox.css);
 @import url(../blocks/rating/rating.css);
 @import url(../blocks/flatpickr-calendar/flatpickr-calendar.css);
 @import url(../blocks/dropdown/dropdown.css);
+@import url(../blocks/collapse/collapse.css);
 
 @import url(../blocks/form/form.css);
 @import url(../blocks/subscribe/subscribe.css);
@@ -27,6 +29,7 @@
 @import url(../blocks/navbar/navbar.css);
 @import url(../blocks/header/header.css);
 
+@import url(../blocks/filter/filter.css);
 @import url(../blocks/search-room/search-room.css);
 
 @import url(../blocks/footer/footer.css);

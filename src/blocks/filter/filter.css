@@ -1,0 +1,12 @@
+.filter{
+  position: relative;
+}
+
+.filter__item{
+  margin-bottom: 20px;
+}
+
+.filter__item--availability,
+.filter__item--room-amenities{
+  margin-bottom: 30px;
+}

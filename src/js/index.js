@@ -55,8 +55,9 @@ window.addEventListener('DOMContentLoaded', () => {
   });
 
   const dropdownGuests = new Dropdown({
-    selector: '.dropdown',
+    selector: '.dropdown-guests',
     label: 'Сколько гостей',
+    items: ['взрослые', 'дети', 'младенцы'],
     worlds: ['гость', 'гостя', 'гостей']
   });
 

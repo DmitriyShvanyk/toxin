@@ -81,9 +81,119 @@
     <main class="main">
       <div class="search-room">
         <div class="container search-room__container">
-          <aside class="search-room__sidebar">
 
+          <!--sidebar.begin-->
+          <aside class="search-room__sidebar">
+            <form action="#" class="filter">
+              <div class="filter__item">
+                <label for="filterDates" class="label">даты пребывания в отеле</label>
+                <input type="text" class="control" name="filterDates" id="filterDates" placeholder="19 авг - 23 авг"
+                  required>
+              </div>
+              <div class="filter__item">
+                <label class="label">гости</label>
+                <div class="dropdown dropdown-guests"></div>
+              </div>
+              <div class="filter__item">
+                <label class="label">диапазон цены</label>
+              </div>
+              <div class="filter__item">
+                <label class="label label--checkbox">Checkbox Buttons</label>
+                <div class="checkboxs">
+                  <label class="checkbox">
+                    <input class="checkbox__control sr-only" type="checkbox" name="check1">
+                    <span class="icon-check checkbox__icon"></span>
+                    <span class="checkbox__text">Можно курить</span>
+                  </label>
+                  <label class="checkbox">
+                    <input class="checkbox__control sr-only" type="checkbox" name="check1" checked>
+                    <span class="icon-check checkbox__icon"></span>
+                    <span class="checkbox__text">Можно с питомцами</span>
+                  </label>
+                  <label class="checkbox">
+                    <input class="checkbox__control sr-only" type="checkbox" name="check1" checked>
+                    <span class="icon-check checkbox__icon"></span>
+                    <span class="checkbox__text">Можно пригласить гостей (до 10 человек)</span>
+                  </label>
+                </div>
+              </div>
+              <div class="filter__item filter__item--availability">
+                <label class="label label--checkbox">доступность</label>
+                <div class="checkboxs">
+                  <label class="checkbox">
+                    <input class="checkbox__control sr-only" type="checkbox" name="checkAvailability">
+                    <span class="icon-check checkbox__icon"></span>
+                    <span class="checkbox__text">
+                      <span class="checkbox__title">Широкий коридор</span>
+                      <span class="checkbox__caption">Ширина коридоров в номере не менее 91 см.</span>
+                    </span>
+                  </label>
+                  <label class="checkbox">
+                    <input class="checkbox__control sr-only" type="checkbox" name="checkAvailability">
+                    <span class="icon-check checkbox__icon"></span>
+                    <span class="checkbox__text">
+                      <span class="checkbox__title">Помощник для инвалидов</span>
+                      <span class="checkbox__caption">На 1 этаже вас встретит специалист и проводит до номера.</span>
+                    </span>
+                  </label>
+                </div>
+              </div>
+              <div class="filter__item filter__item--room-amenities">
+                <label class="label">удобства номера</label>
+                <div class="dropdown dropdown--room-amenities"></div>
+              </div>
+              <div class="filter__item">
+                <div class="collapse">
+                  <label class="label label--checkbox collapse__label">дополнительные удобства</label>
+                  <div class="checkboxs collapse__content">
+                    <label class="checkbox">
+                      <input class="checkbox__control sr-only" type="checkbox" name="checkAdditionalAmenities">
+                      <span class="icon-check checkbox__icon"></span>
+                      <span class="checkbox__text">Завтрак</span>
+                    </label>
+                    <label class="checkbox">
+                      <input class="checkbox__control sr-only" type="checkbox" name="checkAdditionalAmenities" checked>
+                      <span class="icon-check checkbox__icon"></span>
+                      <span class="checkbox__text">Письменный стол</span>
+                    </label>
+                    <label class="checkbox">
+                      <input class="checkbox__control sr-only" type="checkbox" name="checkAdditionalAmenities" checked>
+                      <span class="icon-check checkbox__icon"></span>
+                      <span class="checkbox__text">Стул для кормления</span>
+                    </label>
+                    <label class="checkbox">
+                      <input class="checkbox__control sr-only" type="checkbox" name="checkAdditionalAmenities" checked>
+                      <span class="icon-check checkbox__icon"></span>
+                      <span class="checkbox__text">Кроватка</span>
+                    </label>
+                    <label class="checkbox">
+                      <input class="checkbox__control sr-only" type="checkbox" name="checkAdditionalAmenities">
+                      <span class="icon-check checkbox__icon"></span>
+                      <span class="checkbox__text">Телевизор</span>
+                    </label>
+                    <label class="checkbox">
+                      <input class="checkbox__control sr-only" type="checkbox" name="checkAdditionalAmenities">
+                      <span class="icon-check checkbox__icon"></span>
+                      <span class="checkbox__text">Шампунь</span>
+                    </label>
+                    <label class="checkbox">
+                      <input class="checkbox__control sr-only" type="checkbox" name="checkAdditionalAmenities">
+                      <span class="icon-check checkbox__icon"></span>
+                      <span class="checkbox__text">Телевизор</span>
+                    </label>
+                    <label class="checkbox">
+                      <input class="checkbox__control sr-only" type="checkbox" name="checkAdditionalAmenities">
+                      <span class="icon-check checkbox__icon"></span>
+                      <span class="checkbox__text">Шампунь</span>
+                    </label>
+                  </div>
+                </div>
+              </div>              
+            </form>
           </aside>
+          <!--sidebar.end-->
+
+          <!--content.begin-->
           <section class="search-room__content">
             <h1 class="title search-room__title">
               Номера, которые мы для вас подобрали
@@ -825,6 +935,8 @@
             </nav>
 
           </section>
+          <!--content.end-->
+
         </div>
       </div>
     </main>

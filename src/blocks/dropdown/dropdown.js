@@ -1,8 +1,9 @@
 export default class Dropdown {
-  constructor({ selector, label, worlds = [] }) {
+  constructor({ selector, label, items = [], worlds = [] }) {
     this.container = document.querySelector(selector);
     this.label = label;
-    this.worlds = worlds;
+    this.items = items;
+    this.worlds = worlds;    
 
     this.render();
 
@@ -40,24 +41,24 @@ export default class Dropdown {
             </button>
             <div class="dropdown__inner">
               <div class="dropdown__body">
-                <div class="dropdown__item dropdown__item--adults">
-                  <div class="dropdown__text">взрослые</div>
+                <div class="dropdown__item">
+                  <div class="dropdown__text">${this.items[0]}</div>
                   <div class="dropdown__counts">
                     <button class="dropdown__minus" type="button" disabled>-</button>
                     <input type="number" class="dropdown__count" min="0" value="0">
                     <button class="dropdown__plus" type="button">+</button>
                   </div>
                 </div>
-                <div class="dropdown__item dropdown__item--child">
-                  <div class="dropdown__text">дети</div>
+                <div class="dropdown__item">
+                  <div class="dropdown__text">${this.items[1]}</div>
                   <div class="dropdown__counts">
                   <button class="dropdown__minus" type="button" disabled>-</button>
                     <input type="number" class="dropdown__count" min="0" value="0">
                     <button class="dropdown__plus" type="button">+</button>
                   </div>
                 </div>
-                <div class="dropdown__item dropdown__item--child">
-                  <div class="dropdown__text">младенцы</div>
+                <div class="dropdown__item">
+                  <div class="dropdown__text">${this.items[2]}</div>
                   <div class="dropdown__counts">
                   <button class="dropdown__minus" type="button" disabled>-</button>
                     <input type="number" class="dropdown__count" min="0" value="0">
@@ -147,7 +148,6 @@ export default class Dropdown {
     const totalGuests = +this.container.querySelector('.dropdown__apply').dataset.guests;
 
     if (totalGuests > 0) {
-
       this.container.querySelector('.dropdown__label-text').textContent = this.declensionGuests(totalGuests, this.worlds);
     }
     else {
