@@ -47,7 +47,7 @@
     "flatpickr": "^4.6.3",
     "imask": "^6.0.5",
     "serialize-javascript": "^3.0.0",
-    "swiper": "^5.4.2",
+    "swiper": "^6.5.1",
     "websocket-extensions": "^0.1.4"
   }
 }
